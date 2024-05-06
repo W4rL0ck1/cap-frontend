@@ -5,6 +5,7 @@ import { MainPageComponent } from './Pages/main-page/main-page.component';
 import { LoginPageComponent } from './Pages/login-page/login-page.component';
 import { AboutPageComponent } from './Pages/about-page/about-page.component';
 import { UserPageComponent } from './Pages/user-page/user-page.component';
+import { ProductPageComponent } from './Pages/products-page/products-page.component';
 
 const routes: Routes = [{
   path: '',
@@ -12,7 +13,7 @@ const routes: Routes = [{
   children: [
     { path: '', component: MainPageComponent},
     { path: 'login', component: LoginPageComponent,/* canActivate: [AuthService] */},
-    // { path: 'tasks', component: TasksPageComponent},
+    { path: 'products', component: ProductPageComponent},
     // { path: 'signup', component: SignupPageComponent},
     { path: 'userpage', component: UserPageComponent},
     { path: 'about', component: AboutPageComponent}

@@ -1,0 +1,34 @@
+.product-list-horizontal {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 5%;
+}
+
+.card {
+  display: inline-block;
+  margin-right: 5%;
+  width: 250px;
+  border-radius: 15px;
+  margin: 5%;
+}
+
+.card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+
+.btnCart {
+    background-color: #ffff;
+    color: #07074b;
+    border-radius: 8px 8px 8px 8px;
+    height: 70px;
+    width: 120px;
+    border-color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    float: right;
+    margin-left: 10px;
+    margin-top: 1px;
+    margin-right: 20px;
+}

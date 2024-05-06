@@ -1,0 +1,21 @@
+<div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+  <div class="col-6 card" *ngFor="let product of products" id="">
+      <div class="card">
+        <img class="card-img-top " [src]="product.imageUrl" alt="Product Image">
+        <div class="uk-card uk-card-hover uk-card-primary uk-card-body ">
+          <h3 class="uk-card-title">{{ product.name }}</h3>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text">Preço: R$: {{ product.price }}</p>
+          <div class="uk-animation-toggle" tabindex="0">
+            <div class=" uk-animation-scale-down">
+              <button class="btnCart">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+

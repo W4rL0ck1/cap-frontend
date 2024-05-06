@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutPageComponent } from './Pages/about-page/about-page.component';
 import { UserCardComponent } from './Components/User/user-card/user-card.component';
 import { UserPageComponent } from './Pages/user-page/user-page.component';
-
+import { ProductPageComponent } from './Pages/products-page/products-page.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { UserPageComponent } from './Pages/user-page/user-page.component';
     LogoComponent,
     AboutPageComponent,
     UserCardComponent,
-    UserPageComponent
+    UserPageComponent,
+    ProductPageComponent,
   ],
   imports: [
     BrowserModule,
