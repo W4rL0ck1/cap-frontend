@@ -106,9 +106,5 @@
   },
   "cli": {
     "analytics": "0aa156ed-5e55-40ab-a405-33c6bc9c861d"
-  },
-  "styles": [
-    "styles.scss",
-    "node_modules/ngx-toastr/toastr.css"
-  ]
+  }
 }
