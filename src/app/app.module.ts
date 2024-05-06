@@ -9,7 +9,7 @@ import { MainPageComponent } from './Pages/main-page/main-page.component';
 import { FramePageComponent } from './Pages/master-component/master-component.component';
 import { NavbarComponent } from './Components/Shared/navbar/navbar.component';
 import { ToastrModule } from 'ngx-toastr';
-import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
 import { LocalStorageService } from './Services/localStorage.Service';
 import { LoginPageComponent } from './Pages/login-page/login-page.component';
 import { LoadingComponent } from './Components/Shared/loading/loading.component';
@@ -20,6 +20,7 @@ import { AboutPageComponent } from './Pages/about-page/about-page.component';
 import { UserCardComponent } from './Components/User/user-card/user-card.component';
 import { UserPageComponent } from './Pages/user-page/user-page.component';
 import { ProductPageComponent } from './Pages/products-page/products-page.component';
+import { SignupPageComponent } from './Pages/signup-page/signup-page.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +35,14 @@ import { ProductPageComponent } from './Pages/products-page/products-page.compon
     UserCardComponent,
     UserPageComponent,
     ProductPageComponent,
+    SignupPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule

@@ -60,7 +60,7 @@ export class LoginPageComponent implements OnInit {
 
           await this.util.delay(2300);
           this.toastr.success('Bem Vindo! ', 'Login com Sucesso!');
-          this.setUser(data.data, data.token);
+          this.setUser(data.data.user, data.token);
           this.busy = false;
           await this.util.delay(800);
           this.router.navigate(['/']);

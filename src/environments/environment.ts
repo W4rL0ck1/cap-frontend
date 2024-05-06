@@ -8,4 +8,5 @@ export const environment = {
   // url: ''
   // Local
   url: 'https://localhost:7261'
+  //url: 'http://localhost:5000'
 };

@@ -33,12 +33,11 @@ export class DataService {
   //#region Metodos
 
   authenticate(data: any) {
-    console.log("🚀 ~ DataService ~ authenticate ~ data:", data)
     return this.http.post(`${this.url}/User/AuthenticateUser`, data);
   }
 
   createUser(data: any) {
-    return this.http.post(`${this.url}/users/newuser`, data);
+    return this.http.post(`${this.url}/User/CreateUser`, data);
   }
 
   getUsers() {
