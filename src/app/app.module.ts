@@ -21,6 +21,7 @@ import { UserCardComponent } from './Components/User/user-card/user-card.compone
 import { UserPageComponent } from './Pages/user-page/user-page.component';
 import { ProductPageComponent } from './Pages/products-page/products-page.component';
 import { SignupPageComponent } from './Pages/signup-page/signup-page.component';
+import { ProductCardComponent } from './Components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SignupPageComponent } from './Pages/signup-page/signup-page.component';
     UserPageComponent,
     ProductPageComponent,
     SignupPageComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
