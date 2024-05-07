@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../Models/user.model';
 import { UserToken } from '../Utils/userToken.utils';
 import { environment } from '../../environments/environment';
+import { Product } from '../Models/products.model';
 
 @Injectable({
   providedIn: 'root',
@@ -40,29 +41,23 @@ export class DataService {
     return this.http.post(`${this.url}/User/CreateUser`, data);
   }
 
-  getUsers() {
-    return this.http.get<User[]>(`${this.url}/users`);
+  getAllProducts() {
+    return this.http.get(`${this.url}/Products/GetProducts`, { headers: this.composeHeaders()});
   }
 
-  getUserById(id: number): Observable<User> {
-    return this.http.get<User>(`${this.url}/users/${id}`);
-  }
+  // getUsers() {
+  //   return this.http.get<User[]>(`${this.url}/User`);
+  // }
 
-  getPagenetedJobs(itemsNum: number): Observable<any> {
-    return this.http.get<any>(`${this.url}/jobs/Page/${itemsNum}`, this.headers);
-  }
+  // getUserById(id: number): Observable<User> {
+  //   return this.http.get<User>(`${this.url}/users/${id}`);
+  // }
 
-  getProfile() {
-    return this.http.get(`${this.url}/users`, {
-      headers: this.composeHeaders(),
-    });
-  }
-
-  refreshToken() {
-    return this.http.post(`${this.url}/users/login`, null, {
-      headers: this.composeHeaders(),
-    });
-  }
+  // refreshToken() {
+  //   return this.http.post(`${this.url}/users/login`, null, {
+  //     headers: this.composeHeaders(),
+  //   });
+  // }
 
   resetPassword(data: any) {
     return this.http.post(`${this.url}/users/reset-password`, data);
