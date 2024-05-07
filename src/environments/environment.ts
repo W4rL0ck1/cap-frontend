@@ -7,6 +7,6 @@ export const environment = {
   // PROD
   // url: ''
   // Local
-  url: 'https://localhost:7261'
-  //url: 'http://localhost:5000'
+  //url: 'https://localhost:7261'
+  url: 'http://localhost:5000'
 };
