@@ -1,27 +1,39 @@
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+
 # CapFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+Projeto desenvolvido na versão ^17.3.6 do Angular Cli e Node versão 20.12.2.
+
+ Tem por finalidade mostrar meu know-how em Angular e pode ser usado como template efetuando alguns ajustes conforme sua necessidade.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# CapFrontend
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Development server
+
+Execute `ng serve` para abrir um servidor de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação será carregada automaticamente se você modificar algum dos arquivos de origem(Hot Reload).
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Execute `ng build` para buildar o projeto. O Artifact do projeto será armazenado no diretório `dist/`.
 
-## Running unit tests
+## Rodando o Projeto em um Container
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para fins de facilidade, e caso não queira instalar determinadas versões do node e angular CLI, deste modo poluindo seu ambiente local, este projeto foi atualizado com o dist(artefato buildado) da aplicação.
 
-## Running end-to-end tests
+Para subir um container desta aplicação rode o comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+> docker-compose up
 
-## Further help
+Após executar o comando, o docker irá carregar os arquivos da pasta /dist em um servidor NGINX dentro de um container docker, para usar a aplicação dentro do container, navegue até:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[LOCALHOST](http://localhost:8080)
+
+Se você efetuar qualquer alteração no código e quiser rodar um novo container terá que buildar a aplicação e gerar um /dist.
+
+**NÃO ESQUEÇA DE SUBIR O BACK-END DA APLICAÇÃO, QUE SE ENCONTRA https://github.com/W4rL0ck1/cap-backend**
+
+
