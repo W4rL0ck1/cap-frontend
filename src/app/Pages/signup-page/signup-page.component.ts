@@ -80,16 +80,20 @@ export class SignupPageComponent implements OnInit {
       .createUser(this.form.value)
       .subscribe(
         async (data: any) => {
+          console.log("🚀 ~ SignupPageComponent ~ data:", data)
           if(data.error){
-            this.toastr.error('', `Erro ao efetuar cadastro! : ${data.error || ""}`);
+            this.toastr.error('', `Erro no cadastro! : ${data.error || ""}`);
           }
           this.busy = false;
           this.toastr.success(data.message, 'Cadastro Efetuado com Sucesso!');
           this.login();
         },
         (err: any) => {
+          console.log("🚀 ~ SignupPageComponent ~ submit ~ err:", err)
           this.busy = false;
-          this.toastr.error('', `Erro ao efetuar cadastro! : ${err.error || err.error || ""}`);
+          err.error.$values.forEach((item: { propertyName: any; errorMesage: any; }) => {
+            this.toastr.error('', `Erro ao efetuar cadastro! : ${item.propertyName}:  ${item.errorMesage || ""}`);
+          });
         }
       );
   }
@@ -111,7 +115,7 @@ export class SignupPageComponent implements OnInit {
         },
         (err) => {
           this.busy = false;
-          this.toastr.error('', `Erro ao efetuar cadastro! ${err.error || err.message || ""}`);
+          this.toastr.error('', `Erro no login! ${err.error || err.message || ""}`);
           this.router.navigate(['/login']);
         }
       );

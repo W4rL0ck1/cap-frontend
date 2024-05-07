@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Product {
-  name: string;
-  description: string;
-  price: number;
-  imageUrl: string;
-}
+import { DataService } from '../../Services/data.Service';
+import { Product } from '../../Models/products.model';
 
 @Component({
   selector: 'app-product-page',
@@ -13,49 +8,26 @@ interface Product {
   styleUrls: ['./products-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
-  products: Product[] = [
-    {
-      name: 'Produto 1',
-      description: 'Descrição do Produto 1',
-      price: 19.99,
-      imageUrl: 'https://picsum.photos/300/200'
-    },
-    {
-      name: 'Produto 2',
-      description: 'Descrição do Produto 2',
-      price: 29.99,
-      imageUrl: 'https://picsum.photos/300/201'
-    },
-    {
-      name: 'Produto 3',
-      description: 'Descrição do Produto 3',
-      price: 39.99,
-      imageUrl: 'https://picsum.photos/301/200'
-    },
-    {
-      name: 'Produto 4',
-      description: 'Descrição do Produto 4',
-      price: 19.99,
-      imageUrl: 'https://picsum.photos/302/200'
-    },
-    {
-      name: 'Produto 5',
-      description: 'Descrição do Produto 5',
-      price: 29.99,
-      imageUrl: 'https://picsum.photos/302/201'
-    },
-    {
-      name: 'Product 6',
-      description: 'Descrição do Product 6',
-      price: 39.99,
-      imageUrl: 'https://picsum.photos/303/200'
-    },
-    // Add more products as needed
-  ];
+  public products2: Product[] = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.dataService.getAllProducts().subscribe(
+      async (data: any) => {
+        console.log("🚀 ~ ProductPageComponent ~ data:", data.result.$values)
+        this.products2 = data.result.$values;
+        console.log("🚀 ~ ProductPageComponent ~ products2:", this.products2)
+      },
+    );
   }
-
+    cutString(str: string) {
+      // Check if the string length exceeds 50 characters
+      if (str.length > 42) {
+          // Cut the string to 47 characters
+          return str.substring(0, 40) + "...";
+      }
+      // Return the original string if it doesn't exceed 50 characters
+      return str;
+    }
 }
