@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: cap-frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./dist/cap-frontend/browser:/usr/share/nginx/html
+    command: ["nginx", "-g", "daemon off;"]
