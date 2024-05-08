@@ -42,6 +42,7 @@ Se você efetuar qualquer alteração no código e quiser rodar um novo containe
 Com a Aplicação rodando basta efetuar o cadastro na página inicial do projeto, ou você pode efetuar o login utilizando as credenciais abaixo:
 
 `login: renato.teste@teste.com
+
 senha: renato123`
 
 Pronto! Basta Utilizar a aplicação! :D
