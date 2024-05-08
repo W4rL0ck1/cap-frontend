@@ -30,7 +30,7 @@ Para subir um container desta aplicação rode o comando:
 
 Após executar o comando, o docker irá carregar os arquivos da pasta /dist em um servidor NGINX dentro de um container docker, para usar a aplicação dentro do container, navegue até:
 
-[LOCALHOST](http://localhost:8080)
+[LOCALHOST:8080](http://localhost:8080)
 
 Se você efetuar qualquer alteração no código e quiser rodar um novo container terá que buildar a aplicação e gerar um /dist.
 
