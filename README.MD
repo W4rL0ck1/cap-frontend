@@ -36,4 +36,12 @@ Se você efetuar qualquer alteração no código e quiser rodar um novo containe
 
 **NÃO ESQUEÇA DE SUBIR O BACK-END DA APLICAÇÃO, QUE SE ENCONTRA https://github.com/W4rL0ck1/cap-backend**
 
+# Utilizando a Aplicação
+
+Com a Aplicação rodando basta efetuar o cadastro na página inicial do projeto, ou você pode efetuar o login utilizando as credenciais abaixo:
+
+  `login: renato.teste@teste.com`,
+  `senha: renato123`
+
+Pronto! Basta Utilizar a aplicação! :D
 
